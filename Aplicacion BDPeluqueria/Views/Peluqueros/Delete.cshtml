@@ -1,0 +1,55 @@
+﻿@model Aplicacion_BDPeluqueria.BaseDatos.Peluquero
+@{
+    ViewBag.Title = "Borrar Peluquero";
+}
+<br />
+<h3 style="margin-left:40px"> Datos del Peluquero que se va a Borrar </h3>
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            <span style="margin-left:40px"> @Html.Label("Dni del Peluquero") </span>
+        </dt>
+
+        <dd>
+            <span style="margin-left:40px"> @Html.DisplayFor(model => model.dni_Pel) </span>
+        </dd>
+
+        <dt>
+            <span style="margin-left:40px"> @Html.Label("Nombre del Peluquero") </span>
+        </dt>
+
+        <dd>
+            <span style="margin-left:40px"> @Html.DisplayFor(model => model.nombre_Pel) </span>
+        </dd>
+
+        <dt>
+            <span style="margin-left:40px"> @Html.Label("Apellidos del Peluquero") </span>
+        </dt>
+
+        <dd>
+            <span style="margin-left:40px"> @Html.DisplayFor(model => model.apell_Pel) </span>
+        </dd>
+
+        <dt>
+            <span style="margin-left:40px"> @Html.Label("Dirección del Peluquero") </span>
+        </dt>
+
+        <dd>
+            <span style="margin-left:40px"> @Html.DisplayFor(model => model.dir_Pel) </span>
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color" style="margin-left:40px">
+            <input type="submit" value="Borrar" class="btn btn-default" />
+            <br />
+            <br />
+        </div>
+    }
+</div>

@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> @ViewBag.Title </title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <header id="MainNavbar" class="main-header">
+
+        <nav class="navbar navbar-expand-lg alert alert-warning" style="margin-right:20px">
+            <a href="@Url.Action("Index","Home", new { area = "" })" class="logo">
+                <span class="logo" style="font-size:30px"> <b> <u>P</u>eluqueria <u>L</u>azo's </b></span>
+            </a>
+
+            <div>
+                <ul class="nav nav-tabs" style="margin-left:30px">
+
+
+                    <li routerlinkactive="active" class="active" id="peluqueros" >
+                        <a data-toggle="collapse" href="#Peluqueros" class="collapsed" aria-expanded="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                            Peluqueros <span class="sr-only">(current)</span>
+                        </a>
+                        <div class="collapse" id="Peluqueros" aria-expanded="false" style="height: 0px;">
+
+                            <ul class="treeview-menu">
+                                <li>
+                                    <a href="@Url.Action("Create", "Peluqueros", new { area = "" })">
+                                        <i class="fa fa-users"></i><span>Añadir</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("Index", "Peluqueros", new { area = "" })">
+                                        <i class="fa fa-th-large"></i><span>Registro</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li routerlinkactive="active" class="active" id="clientes" style="margin-left:30px">
+                        <a data-toggle="collapse" href="#Clientes" class="collapsed" aria-expanded="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                            Clientes <span class="sr-only">(current)</span>
+                        </a>
+                        <div class="collapse" id="Clientes" aria-expanded="false" style="height: 0px;">
+
+                            <ul class="treeview-menu">
+                                <li>
+                                    <a href="@Url.Action("Create", "Clientes", new { area = "" })">
+                                        <i class="fa fa-users"></i><span>Añadir </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("Index", "Clientes", new { area = "" })">
+                                        <i class="fa fa-th-large"></i><span>Registro </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li routerlinkactive="active" class="active" id="productos" style="margin-left:30px">
+                        <a data-toggle="collapse" href="#Productos" class="collapsed" aria-expanded="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                            Productos <span class="sr-only">(current)</span>
+                        </a>
+                        <div class="collapse" id="Productos" aria-expanded="false" style="height: 0px;">
+
+                            <ul class="treeview-menu">
+                                <li>
+                                    <a href="@Url.Action("Create", "Productos", new { area = "" })">
+                                        <i class="fa fa-users"></i><span>Añadir</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("Index", "Productos", new { area = "" })">
+                                        <i class="fa fa-th-large"></i><span>Registro </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li routerlinkactive="active" class="active" id="reservas" style="margin-left:30px">
+                        <a data-toggle="collapse" href="#Reservas" class="collapsed" aria-expanded="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                            Reservas <span class="sr-only">(current)</span>
+                        </a>
+                        <div class="collapse" id="Reservas" aria-expanded="false" style="height: 0px;">
+
+                            <ul class="treeview-menu">
+                                <li>
+                                    <a href="@Url.Action("Create", "Reservas", new { area = "" })">
+                                        <i class="fa fa-users"></i><span>Añadir</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("Index", "Reservas", new { area = "" })">
+                                        <i class="fa fa-th-large"></i><span>Registro</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li routerlinkactive="active" class="active" id="casas" style="margin-left:30px">
+                        <a data-toggle="collapse" href="#Casas" class="collapsed" aria-expanded="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                            Casas Comerciales <span class="sr-only">(current)</span>
+                        </a>
+                        <div class="collapse" id="Casas" aria-expanded="false" style="height: 0px;">
+
+                            <ul class="treeview-menu">
+                                <li>
+                                    <a href="@Url.Action("Create", "Casa_Comerc", new { area = "" })">
+                                        <i class="fa fa-users"></i><span>Añadir</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("Index", "Casa_Comerc", new { area = "" })">
+                                        <i class="fa fa-th-large"></i><span>Registro</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" style="margin-left:40px">
+                <button class="btn btn-outline-#fa8072 my-2 my-sm-0" type="submit">Search</button>
+            </form>
+
+            <div class="nav navbar-nav" style="margin-left:40px">
+               
+                    
+                        <div>
+                            <ul>
+                                <li>
+                                    <a href="@Url.Action("Registrar", "Usuarios", new { area = "" })">
+                                        <i class="fa fa-th-large"></i><span>Cuenta</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    
+                
+                <span style="margin-right:20px"> <a href="/"> Salir </a>  </span>
+            </div>
+        </nav>
+    </header>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+
+</body>
+</html>

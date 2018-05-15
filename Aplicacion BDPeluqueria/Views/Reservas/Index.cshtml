@@ -1,0 +1,61 @@
+﻿@model IEnumerable<Aplicacion_BDPeluqueria.Models.Reservas.InfoReserva>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="form-horizontal">
+    <div class="container-fluid">
+        <div class="col-md-4">
+            <div class="card-header">
+                <h2 class="card-title"> Datos de las Reservas </h2>
+            </div>
+
+            <div class="card">
+                <div class="form-group">
+
+                    <table class="table">
+                        <tr>
+                            <th>
+                                <span>  @Html.DisplayNameFor(model => model.num_Res) </span>
+                            </th>
+                            <th>
+                                <span>  @Html.DisplayNameFor(model => model.dni_Cli) </span>
+                            </th>
+                            <th>
+                                <span>  @Html.DisplayNameFor(model => model.dni_Pel) </span>
+                            </th>
+                            @*<th>
+                                    <span>  @Html.DisplayNameFor(model => model.id_Prod) </span>
+                                </th>*@
+                            <th></th>
+                        </tr>
+
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.num_Res)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.dni_Cli)
+                                </td>
+
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.dni_Pel)
+                                </td>
+                                @*<td>
+                                        @Html.DisplayFor(modelItem => item.id_Prod)
+                                    </td>*@
+                                <td>
+                                    @*@Html.ActionLink("Editar", "Edit", new { id = item.num_Res }) |*@
+                                    @Html.ActionLink("Borrar", "Delete", new { id = item.num_Res })
+                                </td>
+                            </tr>
+                        }
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

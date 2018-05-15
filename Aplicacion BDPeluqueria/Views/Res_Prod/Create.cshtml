@@ -1,0 +1,63 @@
+﻿@model Aplicacion_BDPeluqueria.BaseDatos.Res_Prod
+
+@{
+    ViewBag.Title = "Create";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+
+    <div class="form-horizontal">
+        <div class="container-fluid">
+            <div class="col-md-6">
+                <div class="card-header">
+                    <h4 class="card-title"> Añadir una Reserva </h4>
+                </div>
+
+                <div class="card">
+                    <br/>
+
+                    <div class="form-group">
+                        <span style="margin-left:20px"> @Html.Label("Número de la Reserva") </span>
+                        <div class="col-md-10"  data-val-required="Campo requerido">
+                            @Html.EditorFor(model => model.num_Res, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.num_Res, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <span style="margin-left:20px"> @Html.Label("Id del Producto") </span>
+                        <div class="col-md-10"  data-val-required="Campo requerido">
+                            @Html.EditorFor(model => model.id_Prod, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.id_Prod, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <span style="margin-left:20px"> @Html.Label("Cantidad que se Reserva") </span>
+                        <div class="col-md-10"  data-val-required="Campo requerido">
+                            @Html.EditorFor(model => model.cantidad, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.cantidad, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Añadir" class="btn btn-default" />
+                        </div>
+                    </div>
+                    <div>
+                        <span style="margin-left:20px">  @Html.ActionLink("Mostrar lista de Reservas", "Index")</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+}
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

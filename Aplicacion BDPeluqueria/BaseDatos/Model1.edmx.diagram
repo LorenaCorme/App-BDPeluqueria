@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="69ebecec564e4476b8d93c1a0d263e43" Name="Diagram1">
+        <EntityTypeShape EntityType="BDPeluqueriaModel1.Casa_Comerc" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDPeluqueriaModel1.Cliente" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDPeluqueriaModel1.Peluquero" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDPeluqueriaModel1.Producto" Width="1.5" PointX="5.25" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDPeluqueriaModel1.Res_Prod" Width="1.5" PointX="7.5" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDPeluqueriaModel1.Reserva" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="BDPeluqueriaModel1.FK_nombre_Casa" ManuallyRouted="false" />
+        <AssociationConnector Association="BDPeluqueriaModel1.FK__Clientes__dni_Pe__7D439ABD" ManuallyRouted="false" />
+        <AssociationConnector Association="BDPeluqueriaModel1.FK__Reservas__dni_Cl__00200768" ManuallyRouted="false" />
+        <AssociationConnector Association="BDPeluqueriaModel1.FK__Reservas__dni_Pe__01142BA1" ManuallyRouted="false" />
+        <AssociationConnector Association="BDPeluqueriaModel1.FK_Res_Prod_Productos" ManuallyRouted="false" />
+        <AssociationConnector Association="BDPeluqueriaModel1.FK_Res_Prod_Reservas" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="BDPeluqueriaModel1.Usuario" Width="1.5" PointX="9.625" PointY="1.125" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

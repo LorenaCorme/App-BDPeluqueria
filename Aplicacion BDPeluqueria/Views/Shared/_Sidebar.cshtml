@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> @ViewBag.Title </title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="wrapper" style=" margin-left:30px">
+        <header class="main-header">
+          
+        </header>
+        <aside>
+
+            <ul class="sidebar-menu">
+
+                @*<li routerlinkactive="active" class="active" id="clientes">
+                    <a data-toggle="collapse" href="#Clientes" class="collapsed" aria-expanded="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                        Clientes <span class="sr-only">(current)</span>
+                    </a>
+                    <div class="collapse" id="Clientes" aria-expanded="false" style="height: 0px;">
+
+                        <ul class="treeview-menu">
+                            <li>
+                                <a href="@Url.Action("Create", "Clientes", new { area = "" })">
+                                    <i class="fa fa-users"></i><span>Añadir</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Index", "Clientes", new { area = "" })">
+                                    <i class="fa fa-th-large"></i><span>Datos </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Edit", "Clientes", new {area = ""})">
+                                    <i class="fa  fa-file-text-o"></i><span>Modificar</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Delete", "Clientes", new { area = "" })">
+                                    <i class="fa  fa-file-text-o"></i><span> Borrar</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>*@
+
+                @*<li routerlinkactive="active" class="active" id="peluqueros">
+                    <a data-toggle="collapse" href="#Peluqueros" class="collapsed" aria-expanded="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                        Peluqueros <span class="sr-only">(current)</span>
+                    </a>
+                    <div class="collapse" id="Peluqueros" aria-expanded="false" style="height: 0px;">
+
+                        <ul class="treeview-menu">
+                            <li>
+                                <a href="@Url.Action("Create", "Peluqueros", new { area = "" })">
+                                    <i class="fa fa-users"></i><span>Añadir</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Index", "Peluqueros", new { area = "" })">
+                                    <i class="fa fa-th-large"></i><span>Datos </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Edit", "Peluqueros", new { area = "" })">
+                                    <i class="fa  fa-file-text-o"></i><span>Modificar</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Delete", "Peluqueros", new { area = "" })">
+                                    <i class="fa  fa-file-text-o"></i><span> Borrar</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>*@
+
+                @*<li routerlinkactive="active" class="active" id="productos">
+                    <a data-toggle="collapse" href="#Productos" class="collapsed" aria-expanded="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                        Productos <span class="sr-only">(current)</span>
+                    </a>
+                    <div class="collapse" id="Productos" aria-expanded="false" style="height: 0px;">
+
+                        <ul class="treeview-menu">
+                            <li>
+                                <a href="@Url.Action("Create", "Productos", new { area = "" })">
+                                    <i class="fa fa-users"></i><span>Añadir</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Index", "Productos", new { area = "" })">
+                                    <i class="fa fa-th-large"></i><span>Datos </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Edit", "Productos", new { area = "" })">
+                                    <i class="fa  fa-file-text-o"></i><span>Modificar</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Delete", "Productos", new { area = "" })">
+                                    <i class="fa  fa-file-text-o"></i><span> Borrar</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>*@
+                @*<li routerlinkactive="active" class="active" id="reservas">
+                    <a data-toggle="collapse" href="#Reservas" class="collapsed" aria-expanded="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                        Reservas <span class="sr-only">(current)</span>
+                    </a>
+                    <div class="collapse" id="Reservas" aria-expanded="false" style="height: 0px;">
+
+                        <ul class="treeview-menu">
+                            <li>
+                                <a href="@Url.Action("Create", "Res_Prod", new { area = "" })">
+                                    <i class="fa fa-users"></i><span>Añadir</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Index", "Res_Prod", new { area = "" })">
+                                    <i class="fa fa-th-large"></i><span>Datos </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Edit", "Res_Prod", new { area = "" })">
+                                    <i class="fa  fa-file-text-o"></i><span>Modificar</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Delete", "Res_Prod", new { area = "" })">
+                                    <i class="fa  fa-file-text-o"></i><span> Borrar</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>*@
+                @*<li routerlinkactive="active" class="active" id="casas">
+                    <a data-toggle="collapse" href="#Casas" class="collapsed" aria-expanded="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                        Casas Comerciales <span class="sr-only">(current)</span>
+                    </a>
+                    <div class="collapse" id="Casas" aria-expanded="false" style="height: 0px;">
+
+                        <ul class="treeview-menu">
+                            <li>
+                                <a href="@Url.Action("Create", "Casa_Comerc", new { area = "" })">
+                                    <i class="fa fa-users"></i><span>Añadir</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Index", "Casa_Comerc", new { area = "" })">
+                                    <i class="fa fa-th-large"></i><span>Datos </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Edit", "Casa_Comerc", new { area = "" })">
+                                    <i class="fa  fa-file-text-o"></i><span>Modificar</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Delete", "Casa_Comerc", new { area = "" })">
+                                    <i class="fa  fa-file-text-o"></i><span> Borrar</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>*@
+                </ul>
+            </aside>
+        </div>
+    </body>
+</html>
+
+            

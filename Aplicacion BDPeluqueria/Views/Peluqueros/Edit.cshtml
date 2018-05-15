@@ -1,0 +1,62 @@
+﻿@model Aplicacion_BDPeluqueria.BaseDatos.Peluquero
+
+@{
+    ViewBag.Title = "Editar Peluquero";
+}
+
+<br />
+<h3 style="margin-left:40px"> Datos del Peluquero a Modificar </h3>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.dni_Pel)
+        <div class="form-group">
+            <span style="margin-left:40px"> @Html.Label("Dni del Peluquero") </span>
+            <div class="col-md-10" style="margin-left:25px">
+                @Html.EditorFor(model => model.dni_Pel, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.dni_Pel, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <span style="margin-left:40px"> @Html.Label("Nombre del Peluquero") </span>
+            <div class="col-md-10" style="margin-left:25px">
+                @Html.EditorFor(model => model.nombre_Pel, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.nombre_Pel, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <span style="margin-left:40px"> @Html.Label("Apellidos del Peluquero") </span>
+            <div class="col-md-10" style="margin-left:25px">
+                @Html.EditorFor(model => model.apell_Pel, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.apell_Pel, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <span style="margin-left:40px"> @Html.Label("Dirección del Peluquero") </span>
+            <div class="col-md-10" style="margin-left:25px">
+                @Html.EditorFor(model => model.dir_Pel, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.dir_Pel, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-actions no-color" style="margin-left:40px">
+            <input type="submit" value="Guardar" class="btn btn-default" />
+            <br />
+            <br />
+        </div>
+    </div>
+}
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

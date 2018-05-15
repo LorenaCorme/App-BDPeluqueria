@@ -1,0 +1,42 @@
+﻿@model Aplicacion_BDPeluqueria.Models.Peluqueros.mPeluquero
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Peluquero</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nombre_Pel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre_Pel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.apell_Pel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.apell_Pel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dir_Pel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dir_Pel)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.dni_Pel }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

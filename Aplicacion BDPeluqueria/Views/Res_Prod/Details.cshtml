@@ -1,0 +1,42 @@
+﻿@model Aplicacion_BDPeluqueria.BaseDatos.Res_Prod
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Res_Prod</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.cantidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cantidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Producto.nombre_Prod)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Producto.nombre_Prod)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Reserva.dni_Cli)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Reserva.dni_Cli)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

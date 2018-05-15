@@ -1,0 +1,81 @@
+﻿@model Aplicacion_BDPeluqueria.Models.AltaReserva.AltaReserva
+
+@{
+    ViewBag.Title = "Create";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+
+    <div class="form-horizontal">
+        <div class="container-fluid">
+            <div class="col-md-6">
+                <div class="card-header">
+                    <h4 class="card-title"> Alta Reserva </h4>
+                </div>
+
+                <div class="card">
+                    <div class="form-group" style="margin-top:20px">
+
+                        <span style="margin-left:20px"> @Html.LabelFor(model => model.num_Res) </span>
+                        <div class="col-md-10"  data-val-required="Campo requerido">
+                            @Html.EditorFor(model => model.num_Res, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.num_Res, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <span style="margin-left:20px">@Html.Label("Lista de Productos")</span>
+                        <div class="col-md-10" data-val-required="Campo requerido">
+                            @Html.DropDownList("id_Prod", null, "-- Selecciona un producto--", htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.id_Prod, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group" style="margin-top:20px">
+
+                        <span style="margin-left:20px"> @Html.LabelFor(model => model.cantidadReservada) </span>
+                        <div class="col-md-10"  data-val-required="Campo requerido">
+                            @Html.EditorFor(model => model.cantidadReservada, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.cantidadReservada, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <span style="margin-left:20px"> @Html.Label("Nombre del Cliente") </span>
+                        <div class="col-md-10"  data-val-required="Campo requerido">
+                            @Html.DropDownList("dni_Cli", null, htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.dni_Cli, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <span style="margin-left:20px"> @Html.Label("Nombre del Peluquero")</span>
+                        <div class="col-md-10"  data-val-required="Campo requerido">
+                            @Html.DropDownList("dni_Pel", null, htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.dni_Pel, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Añadir" class="btn btn-default" />
+                        </div>
+                    </div>
+
+                    <div>
+                        <span style="margin-left:20px">  @Html.ActionLink("Mostrar lista de Reservas", "Index")</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+}
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

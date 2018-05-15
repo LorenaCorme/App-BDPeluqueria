@@ -1,0 +1,42 @@
+﻿@model Aplicacion_BDPeluqueria.Models.Productos.mProducto
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Producto</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nombre_Prod)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre_Prod)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cantidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cantidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Casa_Comerc.nombre_Casa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Casa_Comerc.nombre_Casa)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_Prod }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

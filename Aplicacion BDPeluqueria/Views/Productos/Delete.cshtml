@@ -1,0 +1,55 @@
+﻿@model Aplicacion_BDPeluqueria.BaseDatos.Producto
+@{
+    ViewBag.Title = "Borrar Producto";
+}
+<br />
+<h3 style="margin-left:40px"> Datos del Producto que se va a Borrar </h3>
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            <span style="margin-left:40px"> @Html.Label("Id del Producto") </span>
+        </dt>
+
+        <dd>
+            <span style="margin-left:40px"> @Html.DisplayFor(model => model.id_Prod) </span>
+        </dd>
+
+        <dt>
+            <span style="margin-left:40px"> @Html.Label("Nombre del Producto") </span>
+        </dt>
+
+        <dd>
+            <span style="margin-left:40px"> @Html.DisplayFor(model => model.nombre_Prod) </span>
+        </dd>
+
+        <dt>
+            <span style="margin-left:40px"> @Html.Label("Cantidad del Producto") </span>
+        </dt>
+
+        <dd>
+            <span style="margin-left:40px"> @Html.DisplayFor(model => model.cantidad) </span>
+        </dd>
+
+        <dt>
+            <span style="margin-left:40px"> @Html.Label("Casa Comercial") </span>
+        </dt>
+
+        <dd>
+            <span style="margin-left:40px"> @Html.DisplayFor(model => model.nombre_Casa) </span>
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color" style="margin-left:40px">
+            <input type="submit" value="Borrar" class="btn btn-default" />
+            <br />
+            <br />
+        </div>
+    }
+</div>

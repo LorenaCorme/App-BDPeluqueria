@@ -1,0 +1,49 @@
+﻿@model Aplicacion_BDPeluqueria.BaseDatos.Reserva
+
+@{
+    ViewBag.Title = "Borrar Reserva";
+}
+
+<br />
+<h3 style="margin-left:40px"> Datos de la Reserva que se va a Borrar </h3>
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            <span style="margin-left:40px"> @Html.Label("Número Reserva") </span>
+        </dt>
+
+        <dd>
+            <span style="margin-left:40px">@Html.DisplayFor(model => model.num_Res) </span>
+        </dd>
+
+        <dt>
+            <span style="margin-left:40px"> @Html.Label("Dni Cliente") </span>
+        </dt>
+
+        <dd>
+            <span style="margin-left:40px">@Html.DisplayFor(model => model.dni_Cli) </span>
+        </dd>
+
+        <dt>
+            <span style="margin-left:40px"> @Html.Label("Dni Peluquero") </span>
+        </dt>
+
+        <dd>
+            <span style="margin-left:40px"> @Html.DisplayFor(model => model.dni_Pel) </span>
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color" style="margin-left:40px">
+            <input type="submit" value="Borrar" class="btn btn-default" />
+            <br />
+            <br />
+        </div>
+    }
+</div>

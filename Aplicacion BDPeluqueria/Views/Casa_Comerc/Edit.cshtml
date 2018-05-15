@@ -1,0 +1,44 @@
+﻿@model Aplicacion_BDPeluqueria.BaseDatos.Casa_Comerc
+
+@{
+    ViewBag.Title = "Editar Casa Comercial";
+}
+
+<br />
+<h3 style="margin-left:40px"> Datos de la Casa Comercial a Modificar </h3>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+    <hr />
+ 
+    <div class="form-group">
+        <span style="margin-left:40px"> @Html.Label("Nombre Casa Comercial") </span>
+        <div class="col-md-10" style="margin-left:25px">
+            @Html.EditorFor(model => model.nombre_Casa, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.nombre_Casa, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <span style="margin-left:40px"> @Html.Label("Localización Casa Comercial") </span>
+        <div class="col-md-10" style="margin-left:25px">
+            @Html.EditorFor(model => model.local_Casa, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.local_Casa, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-actions no-color" style="margin-left:40px">
+        <input type="submit" value="Guardar" class="btn btn-default" />
+        <br />
+        <br />
+    </div>
+</div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,54 @@
+﻿@model Aplicacion_BDPeluqueria.Models.CasasComerciales.mCasaComercial
+@{
+    ViewBag.Title = "Create";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+
+    <div class="form-horizontal" style="align-content:center">
+        <div class="container-fluid">
+            <div class="col-md-6">
+                <div class="card-header">
+                    <h4 class="card-title"> Añadir una Casa Comercial </h4>
+                </div>
+                <div class="card">
+                    <div class="form-group" style="margin-top:20px">
+                        <span style="margin-left:20px"> @Html.Label("Nombre de la Casa Comercial") </span>
+                        <div class="col-md-10"  data-val-required="Campo requerido">
+                            @Html.EditorFor(model => model.nombre_Casa, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.nombre_Casa, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <span style="margin-left:20px"> @Html.Label("Localización de la Casa Comercial") </span>
+                        <div class="col-md-10"  data-val-required="Campo requerido">
+                            @Html.EditorFor(model => model.local_Casa, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.local_Casa, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Añadir" class="btn btn-default" />
+                        </div>
+                    </div>
+
+                    <div>
+                        <span style="margin-left:20px">  @Html.ActionLink("Mostrar lista de Casas Comerciales", "Index") </span>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+}
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

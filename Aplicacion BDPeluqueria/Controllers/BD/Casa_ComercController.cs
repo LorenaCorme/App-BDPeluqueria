@@ -53,6 +53,7 @@ namespace Aplicacion_BDPeluqueria.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "nombre_Casa,local_Casa")] Casa_Comerc casa_Comerc)
         {
+
             if (ModelState.IsValid)
             {
                 db.Casa_Comerc.Add(casa_Comerc);

@@ -1,0 +1,103 @@
+﻿productos
+0001 	Champú Anticaspa              	10  	NULL
+0002 	Champú con Keratina           	11  	NULL
+0003 	Tratamiento Keratina          	12  	0001
+0004 	Espuma Hidrarizos             	13  	0002
+0005 	Espuma Hidraliso              	14  	0003
+0006 	Champú Anticaspa              	15  	0004
+0007 	Champú Anticaída              	16  	0005
+0008 	Champú Vainilla               	17  	0006
+0009 	Champú para cabellos secos    	18  	0007
+0010 	Champú seco                   	19  	0008
+0011 	Champú Nutritivo              	20  	0009
+0012 	Mascarilla Hidratante         	21  	0010
+0013 	Mascarilla de Aceite de Ojón  	22  	0011
+0014 	Mascarilla sin Aclarado       	23  	0001
+0015 	Espuma fijación fuerte        	24  	0002
+0016 	Espuma fijación suave         	25  	0003
+0017 	Laca Keratina                 	25  	0004
+0018 	Champú Rizos Nutridos         	26  	0005
+0019 	Ampolla de Keratina           	18  	0006
+0020 	Activador de Rizos            	24  	0007
+0021 	Champú Oro Líquido            	13  	0008
+0022 	Desenrredante especial rubios 	16  	0009
+0023 	Desenredante pelirrojos       	14  	0010
+0024 	Desenrredante Anticaída       	21  	0011
+0025 	Desenredante Anticaspa        	22  	0001
+0026 	Mascarilla para cabello dañado	23  	0002
+0027 	Mascarilla para cabello graso 	25  	0003
+0028 	Champú Antigrasa              	15  	0004
+0029 	Mascarilla Reparadora         	26  	0005
+0030 	Redensificador Capilar        	24  	0006
+0032 	Acondicionador Antitirones    	12  	0007
+0033 	Champú Antiencrespamiento     	14  	0008
+
+reservas
+0001	32123456I	32123651B
+0002	32123654E	32456746D
+0003	32321456R	32456756D
+0004	32321654H	32486746O
+0005	32452159J	32654958V
+0006	32453651L	32659854D
+0007	32485965V	32798972M
+0008	32569854D	32486746O
+0009	32123456I	32123651B
+0010	32321456R	32456756D
+
+res-prod
+0001	0001	2   	2018-05-03
+0002	0002	3   	2018-01-08
+0003	0003	4   	2018-02-03
+0004	0005	2   	2018-03-03
+0005	0008	5   	2018-04-12
+0006	0005	3   	2018-05-15
+0007	0004	4   	2018-02-25
+0008	0002	1   	2018-01-24
+0009	0006	3   	2018-02-03
+0010	0008	3   	2018-05-03
+
+casas
+0001	Loreal París                  	Madrid                        
+0002	Cabellos                      	Barcelona                     
+0003	Garnier                       	Madrid                        
+0004	Gliss                         	Barcelona                     
+0005	Maurens                       	Madrid                        
+0006	REVLON                        	Barcelona                     
+0007	TRESemmé                      	Madrid                        
+0008	Dove                          	Barcelona                     
+0009	PANTENE Pro V                 	Madrid                        
+0010	Schwarzkopf                   	Barcelona                     
+0011	Herbal Essences               	Madrid                        
+
+clientes
+32123456I	Manuel                        	González                                          	Madrid                        	32456746D
+32123654E	Sofía                         	Rodríguez                                         	Barcelona                     	32456756E
+32321456R	Francisca                     	Montenegro                                        	Pontevedra                    	32798972M
+32321654H	Emilia                        	Ulloa                                             	Vigo                          	32456756E
+32452159J	Amanda                        	Flores                                            	Vigo                          	32456756E
+32453651L	Tomás                         	Mendoza                                           	Pontevedra                    	32486746O
+32485965V	Vicente                       	Aguilar                                           	Orense                        	32654958V
+32569854D	Julián                        	Vázquez                                           	Vigo                          	32486746O
+32654895C	Estela                        	Balmes                                            	Madrid                        	32486746O
+32654987G	Tristán                       	Castro                                            	A Coruña                      	32659854D
+32659854X	Salomé                        	Martínez                                          	A Coruña                      	32659854D
+32789897F	Lolo                          	Suárez                                            	A Coruña                      	32486746O
+32798971M	Jesús                         	Nieto                                             	Pontevedra                    	32654958V
+32798972S	Lorena                        	Martínez                                          	Vigo                          	32456756E
+32987564W	Matías                        	Fernández                                         	Madrid                        	32654958V
+49473896H	Pepe                          	Suárez                                            	Pontevedra                    	32659854D
+
+pelu
+32123651B	Claire                        	Browne                                            	Castellón                     
+32456746D	Juan                          	Pérez                                             	A Coruña                      
+32456756E	Alba                          	Suárez							Orense                        
+32486746O	Derek                         	Morgan                                            	Madrid                        
+32654958V	Jennifer                      	Jareau                                            	Huelva                        
+32659854D	Julia                         	Suárez                                            	Vigo                          
+32798972M	Cristina                      	Lara                                              	A Coruña                      
+
+
+ public int id { get; set; }
+        public string usuario1 { get; set; }
+        public string contraseña { get; set; }
+        public string correo { get; set; }
